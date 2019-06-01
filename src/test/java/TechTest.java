@@ -17,15 +17,15 @@ import static com.codeborne.selenide.Selenide.switchTo;
 public class TechTest {
 
     @Test
-    public void test(){
+    public void test1(){
         WebDriverContainer webdriverContainer = new WebDriverThreadLocalContainer();
         Configuration.screenshots = false;
         webdriverContainer.clearBrowserCache();
 //
         Configuration.browser="chrome";
-        Configuration.remote = "http://39.105.132.200:5001/wd/hub";
+        Configuration.remote = "http://docker.testing-studio.com:5001/wd/hub";
 
-        String baseUrl = "http://jenkins.testing-studio.com:8999/";
+        String baseUrl = "http://docker.testing-studio.com:8999/";
 
         com.codeborne.selenide.Selenide.open(baseUrl);
 
@@ -34,6 +34,45 @@ public class TechTest {
 
         System.out.print("");
     }
+
+//    @Test
+//    public void test2(){
+//        WebDriverContainer webdriverContainer = new WebDriverThreadLocalContainer();
+//        Configuration.screenshots = false;
+//        webdriverContainer.clearBrowserCache();
+////
+//        Configuration.browser="chrome";
+//        Configuration.remote = "http://39.105.132.200:5001/wd/hub";
+//
+//        String baseUrl = "http://jenkins.testing-studio.com:8999/";
+//
+//        com.codeborne.selenide.Selenide.open(baseUrl);
+//
+//        $(byText("Welcome Gaofei!")).should(Condition.visible);
+//
+//
+//        System.out.print("");
+//    }
+//
+//
+//    @Test
+//    public void test3(){
+//        WebDriverContainer webdriverContainer = new WebDriverThreadLocalContainer();
+//        Configuration.screenshots = false;
+//        webdriverContainer.clearBrowserCache();
+////
+//        Configuration.browser="chrome";
+//        Configuration.remote = "http://39.105.132.200:5001/wd/hub";
+//
+//        String baseUrl = "http://jenkins.testing-studio.com:8999/";
+//
+//        com.codeborne.selenide.Selenide.open(baseUrl);
+//
+//        $(byText("Welcome Gaofei!")).should(Condition.visible);
+//
+//
+//        System.out.print("");
+//    }
 
 //    public static void main(String[] args) {
 //        WebDriverContainer webdriverContainer = new WebDriverThreadLocalContainer();
